@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import _ from 'underscore';
 import Backbone from 'backbone';
-// import MovieView from './movie_view';
+import MovieView from './movie_view';
 import Movie from '../models/movie.js';
 
 var MovieListView = Backbone.View.extend({
@@ -16,7 +16,7 @@ var MovieListView = Backbone.View.extend({
 
     var self = this;
 
-    this.model.forEach(function(rawMovie) {
+    this.model.each(function(movie) {
       var movieView = new MovieView({
         model: movie,
         template: self.template
