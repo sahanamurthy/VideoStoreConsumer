@@ -9,6 +9,20 @@
   </head>
   <body>
 
+    <header>
+      <h1>Movies!</h1>
+    </header>
+
+    <main>
+      <section id='movie-list'></section>
+      <ul class="movie-list"></ul>
+    </main>
+
+    <!-- Templates -->
+    <script id="movie-template" type="text/template">
+      <li class="movie-title"><%- movie.title %></li>
+    </script>
+
     <script src="/app.bundle.js"></script>
 
   </body>

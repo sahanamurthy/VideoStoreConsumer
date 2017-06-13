@@ -1,12 +1,16 @@
-// /src/app.js
-
-// Import jQuery & Underscore
 import $ from 'jquery';
 import _ from 'underscore';
+import MovieList from 'collections/movie_list';
+import MovieListView from 'views/movie_list_view';
 
-// ready to go
+var myMovieList = new MovieList();
+myMovieList.fetch();
+
 $(document).ready(function() {
 
-  $('section.main-content').append('<p>Hello World!</p>');
+  var myMovieListView = new MovieListView ({
+    model: myMovieList,
+    el: 'main'
+  })
 
 });
