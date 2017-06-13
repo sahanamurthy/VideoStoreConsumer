@@ -36,7 +36,7 @@ This project will be utilizing an external API within an API! Whoa! Your front-e
     - [Configuration](https://developers.themoviedb.org/3/configuration/get-api-configuration)
 
 ### 3. Rails Part
-  - One person shall fork [this]() repository
+  - One person shall fork [this repository](https://github.com/Ada-C7/VideoStoreConsumer-API)
   - Add the pair as a collaborate on the project
   - Both people shall clone the repository
   - Set up the DB
