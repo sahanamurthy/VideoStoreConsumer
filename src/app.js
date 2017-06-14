@@ -11,13 +11,13 @@ $(document).ready(function() {
   var myMovieList = new MovieList({url: "http://localhost:3000/movies"});
   var myMovieListView = new MovieListView ({
     model: myMovieList,
-    el: 'main'
+    el: '#rental'
   });
 
   var searchMovieList = new MovieList({url: "http://localhost:3000/movies?query="});
   var searchMovieListView = new MovieListView ({
     model: searchMovieList,
-    el: 'main'
+    el: '#movie-db'
   });
 
 });
