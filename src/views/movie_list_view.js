@@ -31,10 +31,16 @@ var MovieListView = Backbone.View.extend({
 
   showList: function() {
     this.model.fetch();
+    console.log("showlist");
+  },
+
+  searchList: function() {
+    this.model.fetch();
   },
 
   events: {
-    "click #rental-library": "showList"
+    "click #rental-library": "showList",
+    "click #search-button": "searchList"
   }
 });
 

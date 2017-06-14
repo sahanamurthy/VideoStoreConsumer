@@ -14,4 +14,10 @@ $(document).ready(function() {
     el: 'main'
   });
 
+  var searchMovieList = new MovieList({url: "http://localhost:3000/movies?query="});
+  var searchMovieListView = new MovieListView ({
+    model: searchMovieList,
+    el: 'main'
+  });
+
 });
