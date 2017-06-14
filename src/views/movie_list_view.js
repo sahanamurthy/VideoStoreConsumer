@@ -37,10 +37,10 @@ var MovieListView = Backbone.View.extend({
   searchList: function() {
     var formData = this.readNewSearchForm();
     console.log(formData);
-    var self = this;
-    self.set( "http://localhost:3000/movies?query=" + formData["search"]);
+    console.log(this.model.url)
+    var newUrl = this.model.url + formData.search;
+    this.model.url = newUrl;
     this.model.fetch();
-
   },
 
   clearForm: function() {
