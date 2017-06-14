@@ -12,6 +12,7 @@ var MovieListView = Backbone.View.extend({
   },
 
   render: function() {
+    console.log("In render");
     this.$('#movie-list').empty();
 
     var self = this;
@@ -26,6 +27,14 @@ var MovieListView = Backbone.View.extend({
     });
 
     return this;
+  },
+
+  showList: function() {
+    this.model.fetch();
+  },
+
+  events: {
+    "click #rental-library": "showList"
   }
 });
 
