@@ -14,7 +14,9 @@ $(document).ready(function() {
     el: '#rental'
   });
 
-  var searchMovieList = new MovieList({url: "http://localhost:3000/movies?query="});
+  var searchMovieList = new MovieList(
+    {url: "http://localhost:3000/movies?query="}
+  );
   var searchMovieListView = new MovieListView ({
     model: searchMovieList,
     el: '#movie-db'
