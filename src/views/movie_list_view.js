@@ -6,7 +6,7 @@ import Movie from '../models/movie.js';
 
 var MovieListView = Backbone.View.extend({
   initialize: function(options) {
-    this.template = _.template($('#movie-template').html());
+    this.template = options.template;
     this.listenTo(this.model, 'update', this.render);
     // this.listElement = this.$('.movie-list');
   },

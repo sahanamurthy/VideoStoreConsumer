@@ -11,6 +11,7 @@ $(document).ready(function() {
   var myMovieList = new MovieList({url: "http://localhost:3000/movies"});
   var myMovieListView = new MovieListView ({
     model: myMovieList,
+    template: _.template($('#movie-template').html()),
     el: '#rental'
   });
 
@@ -19,6 +20,7 @@ $(document).ready(function() {
   );
   var searchMovieListView = new MovieListView ({
     model: searchMovieList,
+    template: _.template($('#search-template').html()),
     el: '#movie-db'
   });
 
