@@ -59,20 +59,9 @@ var MovieListView = Backbone.View.extend({
     return formData;
   },
 
-  addMovie: function(event) {
-    // var url = "http://localhost:3000/movies";
-    // var data = this.
-    // $.post(url, data, function(response){
-    //   console.log(response);
-    //   console.log("added!");
-    // })
-    console.log(this.model.title);
-  },
-
   events: {
     "click #rental-library": "showList",
     "click #search-button": "searchList",
-    "click #add-button": "addMovie"
   }
 });
 
