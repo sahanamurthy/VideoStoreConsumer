@@ -33,12 +33,17 @@
   <!-- Templates -->
   <script id="movie-template" type="text/template">
     <li class="movie-title"><%- movie.title %></li>
+    <img src=<%- movie.image_url %>>
   </script>
 
   <script id="search-template" type="text/template">
     <li class="movie-title"><%- movie.title %><button id="add-button" class="button" method="post">Add</button></li>
+    <img src=<%- movie.image_url %>>
     <!-- <li><button id="add-button" class="button">Add to Rental Library</button></li> -->
   </script>
+
+  <!-- <script id="rental-detail" type="text/template">
+    < -->
 
   <script src="/app.bundle.js"></script>
 
