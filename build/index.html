@@ -14,13 +14,13 @@
   </header>
 
   <main>
-    <section id="rental" class="columns medium-6 small-12">
+    <section id="rental" class="columns medium-12 small-12">
       <button id="rental-library" class="button">View Rental Library</button>
       <section id='movie-list'></section>
       <!-- <ul class="movie-list"></ul> -->
     </section>
 
-    <section id="movie-db" class="columns medium-6 small-12">
+    <section id="movie-db" class="columns medium-12 small-12">
       <div>
         <input type="text" name="search" id="search">
         <button id="search-button" class="button">Search</button>
@@ -32,12 +32,14 @@
 
   <!-- Templates -->
   <script id="movie-template" type="text/template">
-    <li class="movie-title"><%- movie.title %></li>
-    <img src=<%- movie.image_url %>>
+    <section id="title-card">
+      <img src=<%- movie.image_url %>>
+      <h5 class="movie-title"><%- movie.title %></h5>
+    </section>
   </script>
 
   <script id="search-template" type="text/template">
-    <li class="movie-title"><%- movie.title %><button id="add-button" class="button" method="post">Add</button></li>
+    <h3 class="movie-title"><%- movie.title %><button id="add-button" class="button" method="post">Add</button></h3>
     <img src=<%- movie.image_url %>>
     <!-- <li><button id="add-button" class="button">Add to Rental Library</button></li> -->
   </script>

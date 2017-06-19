@@ -46,3 +46,14 @@ div {
 #add-button {
   /*float: right;*/
 }
+
+#rental {
+  text-align: center;
+}
+
+#title-card {
+  display: inline-block;
+  margin: 25px;
+  height: 300px;
+  width: 250px;
+}
