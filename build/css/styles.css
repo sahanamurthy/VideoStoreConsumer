@@ -47,11 +47,11 @@ div {
   /*float: right;*/
 }
 
-#rental, #movie-db {
+.rental, .movie-db {
   text-align: center;
 }
 
-#title-card {
+.title-card {
   display: inline-block;
   margin: 25px;
   height: 300px;

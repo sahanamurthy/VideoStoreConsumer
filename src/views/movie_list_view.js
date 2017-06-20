@@ -31,7 +31,6 @@ var MovieListView = Backbone.View.extend({
 
   showList: function() {
     this.model.fetch();
-    console.log("showlist");
   },
 
   searchList: function() {
