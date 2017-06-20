@@ -39,8 +39,11 @@
   </script>
 
   <script id="search-template" type="text/template">
-    <h3 class="movie-title"><%- movie.title %><button id="add-button" class="button" method="post">Add</button></h3>
-    <img src=<%- movie.image_url %>>
+    <section id="title-card">
+      <img src=<%- movie.image_url %>>
+      <h5 class="movie-title"><%- movie.title %></h5>
+      <button id="add-button" class="button" method="post">Add</button>
+    </section>
     <!-- <li><button id="add-button" class="button">Add to Rental Library</button></li> -->
   </script>
 
