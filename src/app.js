@@ -12,7 +12,7 @@ $(document).ready(function() {
   var myMovieListView = new MovieListView ({
     model: myMovieList,
     template: _.template($('#movie-template').html()),
-    el: '#rental'
+    el: '.rental'
   });
 
   var searchMovieList = new MovieList(
@@ -21,7 +21,7 @@ $(document).ready(function() {
   var searchMovieListView = new MovieListView ({
     model: searchMovieList,
     template: _.template($('#search-template').html()),
-    el: '#movie-db'
+    el: '.movie-db'
   });
 
 });

@@ -11,22 +11,25 @@
 
   <header>
     <h1>Movies!</h1>
+
+    <section class="rental">
+      <button id="rental-library" class="button">View Rental Library</button>
+    </section>
+
+    <section class="movie-db">
+      <input type="text" name="search" id="search">
+      <button id="search-button" class="button">Search</button>
+    </section>
+
   </header>
 
   <main>
-    <section id="rental" class="columns medium-12 small-12">
-      <button id="rental-library" class="button">View Rental Library</button>
+    <section class="rental" class="columns medium-12 small-12">
       <section id='movie-list'></section>
-      <!-- <ul class="movie-list"></ul> -->
     </section>
 
-    <section id="movie-db" class="columns medium-12 small-12">
-      <div>
-        <input type="text" name="search" id="search">
-        <button id="search-button" class="button">Search</button>
+    <section class="movie-db" class="columns medium-12 small-12">
         <section id='movie-list'></section>
-        <!-- <ul class="movie-list"></ul> -->
-      </div>
     </section>
   </main>
 
