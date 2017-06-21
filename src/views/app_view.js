@@ -23,6 +23,19 @@ var AppView = Backbone.View.extend({
       template: _.template($('#search-template').html()),
       el: '.movie-db'
     });
+  },
+
+  clearShowList: function() {
+    $('.movie-db #movie-list').empty();
+  },
+
+  clearSearchList: function() {
+    $('.rental #movie_list').empty();
+  },
+
+  events: {
+    "click #rental-library": "clearShowList",
+    "click #search-button": "clearSearchList",
   }
 });
 
