@@ -30,10 +30,14 @@ var MovieListView = Backbone.View.extend({
   },
 
   showList: function() {
+    $('.movie-db #movie-list').hide();
+    $('.rental #movie-list').show();
     this.model.fetch();
   },
 
   searchList: function() {
+    $('.rental #movie-list').hide();
+    $('.movie-db #movie-list').show();
     var formData = this.readNewSearchForm();
     console.log(formData);
     console.log(this.model.url)
