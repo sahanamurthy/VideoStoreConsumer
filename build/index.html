@@ -29,8 +29,9 @@
     </section>
 
     <section class="movie-db" class="columns medium-12 small-12">
-        <section id='movie-list'></section>
+      <section id='movie-list'></section>
     </section>
+
   </main>
 
   <!-- Templates -->
@@ -38,6 +39,19 @@
     <section class="title-card">
       <img src=<%- movie.image_url %>>
       <h5 class="movie-title"><%- movie.title %></h5>
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn">Open Modal</button>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+
+      </div>
     </section>
   </script>
 
