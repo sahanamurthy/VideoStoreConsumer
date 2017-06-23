@@ -24,25 +24,39 @@ var MovieView = Backbone.View.extend({
     var html = this.template({movie: this.model.toJSON()});
     this.$el.html(html);
 
+    // this.$("#movie-details").append(this.MovieView.render().$el);
+
     return this;
   },
 
-  openModal: function() {
-    var modal = document.getElementById('myModal');
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
+  // showDetails: function(event) {
+  //   console.log(this);
+  //   var movieDetails = this.template()
+  // }
 
-    modal.style.display = "block";
+  openModal: function() {
+    console.log("open");
+    var modal = document.getElementById('movie-details');
+
+    // var modal = $('#movie-details');
+    // var btn = $("#myBtn");
+    // var span = document.getElementsByClassName("close")[0];
+    //
+    // modal.style.display = "block";
+    // modal.show();
+    this.trigger("details", this.modal);
   },
 
   closeModal: function(event) {
-    var modal = document.getElementById('myModal');
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
+    console.log("close");
 
+    var modal = document.getElementById('movie-details');
+    // var btn = document.getElementById("myBtn");
+    // var span = document.getElementsByClassName("close")[0];
+    //
     if (event.target == modal) {
-      modal.style.display = "none";
-    }
+      modal.hide();
+    };
   },
 
   events: {

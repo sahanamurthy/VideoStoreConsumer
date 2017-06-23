@@ -7,6 +7,7 @@ import Movie from '../models/movie.js';
 var MovieListView = Backbone.View.extend({
   initialize: function(options) {
     this.template = options.template;
+    this.modalTemplate = _.template($('#movie-modal-template').html());
     this.listenTo(this.model, 'update', this.render);
     // this.listElement = this.$('.movie-list');
   },
@@ -23,10 +24,22 @@ var MovieListView = Backbone.View.extend({
         template: self.template
       });
 
+      // add listento here
+      self.listenTo(movieView, "details", self.showDetails);
+
+
       self.$("#movie-list").append(movieView.render().$el);
+
     });
 
     return this;
+  },
+
+  showDetails: function(movie) {
+    this.modalTemplate({
+      title: movie.title
+    })
+    console.log(movie);
   },
 
   showList: function() {
