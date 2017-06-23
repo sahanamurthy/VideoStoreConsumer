@@ -12,6 +12,12 @@ header {
   height: 100px;
 }
 
+footer {
+  background-color: #4183D7;
+  color: #F7CA18;
+  font-family: 'Monoton', cursive;
+}
+
 #completed-checkbox {
   display: inline;
 }
