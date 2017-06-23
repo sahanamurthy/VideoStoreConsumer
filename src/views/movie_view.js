@@ -15,6 +15,7 @@ var MovieView = Backbone.View.extend({
     $.post(url, data, function(response){
       console.log(response);
       console.log("added!");
+
     });
     console.log(this.model.attributes);
   },

@@ -44,7 +44,15 @@ var MovieListView = Backbone.View.extend({
     this.model.url = "http://localhost:3000/movies?query=";
     var newUrl = this.model.url + formData.search;
     this.model.url = newUrl;
-    this.model.fetch();
+    this.model.fetch()
+      .then(function(){
+        console.log("ok");
+      }).catch(function(){
+        alert("No movie found");
+      });
+    // if (response.count == null) {
+    //   alert("No movie found");
+    // };
   },
 
   clearForm: function() {
