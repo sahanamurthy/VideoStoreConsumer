@@ -34,7 +34,7 @@ var MovieView = Backbone.View.extend({
   //   var movieDetails = this.template()
   // }
 
-  openModal: function() {
+  openModal: function(event) {
     console.log("open");
     var modal = document.getElementById('movie-details');
 
@@ -44,19 +44,20 @@ var MovieView = Backbone.View.extend({
     //
     // modal.style.display = "block";
     // modal.show();
-    this.trigger("details", this.modal);
+    this.trigger("details", this.model);
+    event.preventDefault();
   },
 
   closeModal: function(event) {
-    console.log("close");
-
-    var modal = document.getElementById('movie-details');
-    // var btn = document.getElementById("myBtn");
-    // var span = document.getElementsByClassName("close")[0];
+    // console.log("close");
     //
-    if (event.target == modal) {
-      modal.hide();
-    };
+    // var modal = document.getElementById('movie-details');
+    // // var btn = document.getElementById("myBtn");
+    // // var span = document.getElementsByClassName("close")[0];
+    // //
+    // if (event.target == modal) {
+    //   // modal.hide();
+    // };
   },
 
   events: {
