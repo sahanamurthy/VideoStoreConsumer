@@ -55,9 +55,10 @@ var MovieView = Backbone.View.extend({
     // // var btn = document.getElementById("myBtn");
     // // var span = document.getElementsByClassName("close")[0];
     // //
-    // if (event.target == modal) {
-    //   // modal.hide();
-    // };
+    if (event.target == modal) {
+      // modal.hide();
+      // modal.style.display = "none";
+    };
   },
 
   events: {
