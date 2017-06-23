@@ -1,12 +1,15 @@
 @include foundation-everything;
 
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
 main {
     background: lightblue;
 }
 
 header {
-  background-color: lightgreen;
+  background-color: #4183D7;
   padding: 0.5rem;
+  height: 100px;
 }
 
 #completed-checkbox {
@@ -51,9 +54,29 @@ div {
   text-align: center;
 }
 
+
 .title-card {
   display: inline-block;
   margin: 25px;
   height: 300px;
   width: 250px;
+}
+header h1 {
+  float: left;
+  font-family: 'Monoton', cursive;
+  color: #F7CA18;
+}
+
+#rental-library, #search, #search-button {
+  float: right;
+  margin: 20px;
+}
+
+#search {
+  width: 300px;
+}
+
+.button {
+  background-color: #F7CA18;
+  color: #4183D7;
 }
