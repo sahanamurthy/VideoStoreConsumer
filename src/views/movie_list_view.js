@@ -37,7 +37,10 @@ var MovieListView = Backbone.View.extend({
 
   showDetails: function(movie) {
     var generatedHTML = this.modalTemplate({
-      title: movie.get('title')
+      title: movie.get('title'),
+      overview: movie.get('overview'),
+      release_date: movie.get('release_date'),
+      inventory: movie.get('inventory')
     });
     console.log(generatedHTML);
     console.log(this.$el);

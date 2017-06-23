@@ -49,22 +49,22 @@ var MovieView = Backbone.View.extend({
   },
 
   closeModal: function(event) {
-    // console.log("close");
+    console.log("close");
     //
     // var modal = document.getElementById('movie-details');
     // // var btn = document.getElementById("myBtn");
     // // var span = document.getElementsByClassName("close")[0];
     // //
-    if (event.target == modal) {
-      // modal.hide();
+    var modal = $('#movie-details');
+
+      modal.hide();
       // modal.style.display = "none";
-    };
   },
 
   events: {
     "click #add-button": "addMovie",
     "click #myBtn": "openModal",
-    "click": "closeModal"
+    "click #close": "closeModal"
   }
 });
 
